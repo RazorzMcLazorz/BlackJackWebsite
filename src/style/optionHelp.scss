@@ -1,0 +1,15 @@
+#optionHelp {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+    a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        width: 380px;
+        background-color: rgb(238, 238, 238);
+    }
+}

@@ -1,0 +1,21 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    #inputChange {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .line {
+        width: 50%;
+        height: 1px;
+        background-color: black;
+        margin-bottom: 10px;
+    }
+}

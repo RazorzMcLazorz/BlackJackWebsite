@@ -1,0 +1,17 @@
+@import 'title';
+@import 'inputChange';
+@import 'dealersCards';
+@import 'playerCards';
+@import 'buttonCards';
+@import 'optionHelp';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
