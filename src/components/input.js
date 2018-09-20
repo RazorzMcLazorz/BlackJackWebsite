@@ -319,6 +319,7 @@ class Input extends Component {
             this.setState({ Ace2: true });
             console.log(CardOne);
         }
+        CV3 = 0;
     }
 
     doubleDown() {
@@ -498,6 +499,9 @@ class Input extends Component {
             this.setState({ text: 'GAME OVER' });
             this.setState({ text2: 'Thanks for Playing i hope you enjoyed!'});
         }
+        this.setState({ Ace1: false });
+        this.setState({ Ace2: false });
+        this.setState({ Ace3: false });
     }
 
     // selection1() {
