@@ -311,6 +311,14 @@ class Input extends Component {
         this.setState({ selected: false });
         this.setState({ continue1: true });
         this.setState({ text3: 'click the button that coresponds with your ace to be switched between 1 or 11 value.' });
+        if ( 11 === Card_Deck_Value[CardOne]) {
+            this.setState({ Ace1: true });
+            console.log(CardOne);
+        }
+        if ( 11 === Card_Deck_Value[CardTwo]) {
+            this.setState({ Ace2: true });
+            console.log(CardOne);
+        }
     }
 
     doubleDown() {
@@ -411,7 +419,12 @@ class Input extends Component {
             CV3 = this.state.CardThreeVal;
         }
         else if (Card_Deck_Value[CardThree] != 11){
+            if (CardThree == '') { 
+                CV3 = 0;
+            }
+            else {
             CV3 = Card_Deck_Value[CardThree];
+            }
         }
         console.log(CV1, CV2, CV3);
         temp = CV1 + CV2 + CV3;
