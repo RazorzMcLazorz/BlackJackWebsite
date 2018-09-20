@@ -167,7 +167,7 @@ class Input extends Component {
             this.state = {
                 gameNotStarted: true,
                 text: 'Welcome to Black Jack - the game will walk you through the basics of the game',
-                text2: 'the game is fair and not against unless the random doesnt like you',
+                text2: 'the game is fair and not against unless the RNG doesnt like you.',
                 text3: '',
                 dealerCardOne: 'Dealer Cards are displayed here',
                 dealerCardTwo: '',
@@ -176,9 +176,9 @@ class Input extends Component {
                 playerCardOne: 'your Cards are displayed here',
                 playerCardTwo: '',
                 playerCardThree: '',
-                money: 'your money will be shown here',
+                money: '0',
                 bets: false,
-                bet: null,
+                bet: '0',
                 selected: false,
                 continue1: false,
                 continue2: false,
@@ -507,7 +507,6 @@ class Input extends Component {
                         {this.state.text3}
                     </a>
                 </div>
-                <div className="line"></div>
                 <div id="dealerCards">
                     <a id="dealer">
                         Dealer Cards
@@ -529,10 +528,13 @@ class Input extends Component {
                 </div>
                 <div id="playerCards">
                     <div id="blackJackTable">
-                        <a>
+                        <div id="tablediv">
+                            <img id="table" src="./assets/table.png"></img>
+                        </div>
+                        <a id="YC">
                             {this.state.playerText}
                         </a>
-                        <div>
+                        <div id="cards">
                             <div>
                                 {this.state.playerCardOne}
                                 <a>
@@ -551,12 +553,14 @@ class Input extends Component {
                                     {this.state.CardThreeVal}
                                 </a>
                             </div>
-                            <div>
-                                <a>
-                                    {this.state.CardValue}
-                                </a>
+                        </div>    
+                        <div id="CCP">
+                            <a>
+                                {this.state.CardValue}
+                            </a>
+                            <a>
                                 {this.state.CardCombinedPoints}
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -590,10 +594,7 @@ class Input extends Component {
                             <button onClick={() => this.minusten()}>
                                 - $10
                             </button>
-                            <a>
-                                {this.state.bet}
-                            </a>
-                            <button onClick={this.bet}>
+                            <button id="PB" onClick={this.bet}>
                                 place your bet
                             </button>
                         </div> : '' }
@@ -615,7 +616,7 @@ class Input extends Component {
                         </div> : ''}
                         
                         {this.state.continue1 ? 
-                        <div>
+                        <div id="switch">
                             {this.state.Ace1 ?
                             <button onClick={() => this.switchAceOne()}>
                                 {Card_Deck[CardOne] + ' ' + this.state.CardOneVal}
@@ -631,21 +632,21 @@ class Input extends Component {
                         </div> : ''}
 
                         {this.state.continue1 ?
-                        <div>
+                        <div className="cont">
                             <button id="continue1" onClick={() => this.continueone()}>
                                 Continue
                             </button>
                         </div> : ''}
 
                         {this.state.continue2 ?
-                        <div>
+                        <div className="cont">
                             <button id="continue2" onClick={this.continuetwo}>
                                 Continue
                             </button>
                         </div> : ''}
 
                         {this.state.continue3 ?
-                        <div>
+                        <div className="cont">
                             <button id="continue3" onClick={this.continuethree}>
                                 Continue
                             </button>
@@ -654,10 +655,10 @@ class Input extends Component {
                     </div> : 'GAME OVER' }
                     <div id="money">
                         <a>
-                            {this.state.bet}
+                            Bet: {this.state.bet}
                         </a>
                         <a>
-                            {this.state.money}
+                            Money: {this.state.money}
                         </a>
                     </div>
                 </div>

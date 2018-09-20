@@ -1,35 +1,32 @@
-#buttonCards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-
-    #selections1 {
-        button {
-            height: 30px;
-            width: 70px;
-            border-radius: 5px;
-            outline-style: none;
-            margin-left: 3px;
-            margin-right: 3px;
-            text-decoration: none;
-            background-color: whitesmoke;
-        }
-        button:hover {
-            background-color: gray;
-        }
-        button:active {
-            background-color: black;
-        }
-    }
-}
 #bottomRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 625px;
+    width: 400px;
+    div {
+        button {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 5px;
+            border-color: #ffcc5d;
+            background-color: transparent;
+            color: white;
+            padding-left: 3px;
+            padding-right: 3px;
+            margin: 5px;
+        }
+    }
     #money {
-        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 450px;
+        width: 80px;
     }
 }

@@ -20,8 +20,10 @@ export default class App extends Component {
   render() {
     return (
         <div className="app">
-            <Title />
-            <Input />
+            <div id="html">
+                <Title />
+                <Input />
+            </div>
         </div>
     );
   }

@@ -4,14 +4,23 @@
 @import 'playerCards';
 @import 'buttonCards';
 @import 'optionHelp';
+@import 'table';
 
 * {
     padding: 0;
     margin: 0;
+    font-family: Almendra;
 }
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    background-image: linear-gradient(to top, #1e3f07 0%, #205e14 100%);
+    z-index: -8;
+    height: 100vw;
+    #html {
+        z-index: 1;
+        color: white;
+    }
 }
