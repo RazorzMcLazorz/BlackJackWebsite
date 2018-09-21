@@ -167,7 +167,7 @@ class Input extends Component {
             this.state = {
                 gameNotStarted: true,
                 text: 'Welcome to Black Jack - the game will walk you through the basics of the game',
-                text2: 'the game is fair and not against unless the RNG doesnt like you.',
+                text2: 'the game is fair and not against you, unless the RNG doesnt like you =.',
                 text3: '',
                 dealerCardOne: 'Dealer Cards are displayed here',
                 dealerCardTwo: '',

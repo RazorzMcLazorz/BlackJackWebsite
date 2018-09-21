@@ -1,15 +1,17 @@
-.input{
-    #dealerCards {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        #dealer {
-            
-            div {
+@media only screen and (min-width: 650px) {
+    .input{
+        #dealerCards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            #dealer {
+                
                 div {
-                     
+                    div {
+                        
+                    }
                 }
             }
         }

@@ -1,17 +1,19 @@
-.input {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    #inputChange {
+@media only screen and (min-width: 650px) {
+    .input {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 400px;
-        height: 150px;
-        a {
-            
+        #inputChange {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 400px;
+            height: 150px;
+            a {
+                
+            }
         }
     }
 }

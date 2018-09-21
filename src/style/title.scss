@@ -1,19 +1,21 @@
-.title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    #headTitle {
-        font-size: 70px;
-    }
-    .line {
-        width: 90%;
-        height: 1px;
-        background-color: #ffcc5d;
-    }
-    #subTitle {
-        font-size: 35px;
-        color: #ffcc5d;
+@media only screen and (min-width: 650px) {
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        #headTitle {
+            font-size: 70px;
+        }
+        .line {
+            width: 90%;
+            height: 1px;
+            background-color: #ffcc5d;
+        }
+        #subTitle {
+            font-size: 35px;
+            color: #ffcc5d;
+        }
     }
 }

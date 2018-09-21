@@ -1,26 +1,13 @@
-@import 'title';
-@import 'inputChange';
-@import 'dealersCards';
-@import 'playerCards';
-@import 'buttonCards';
-@import 'optionHelp';
-@import 'table';
-@import 'Mobile';
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: Almendra;
-}
-@media only screen and (min-width: 650px) {
+@media only screen and (max-width: 649px) {
     .app {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        background-color: green;
         background-image: linear-gradient(to top, #1e3f07 0%, #205e14 100%);
         z-index: -8;
-        height: 1500px;
+        height: 1000px;
         width: 100vw;
         #html {
             z-index: 1;

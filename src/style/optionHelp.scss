@@ -1,20 +1,22 @@
-#optionHelp {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    position: absolute;
-    top: 650px;
-    margin-top: 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #d1be11;
-    border-radius: 5px;
-    a {
+@media only screen and (min-width: 650px) {
+    #optionHelp {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-left: 10px;
-        margin-bottom: 5px;
-        width: 380px;
+        flex-direction: column;
+        width: 400px;
+        position: absolute;
+        top: 650px;
+        margin-top: 20px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #d1be11;
+        border-radius: 5px;
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            width: 380px;
+        }
     }
 }
