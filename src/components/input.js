@@ -189,7 +189,7 @@ class Input extends Component {
                 CardOneVal: '',
                 CardTwoVal: '',
                 CardThreeVal: '',
-                CardCombinedPoints: '',
+                CardCombinedPoints: null,
                 CardValue: '',
                 gameEnded: true
         }
@@ -429,6 +429,7 @@ class Input extends Component {
         }
         console.log(CV1, CV2, CV3);
         temp = CV1 + CV2 + CV3;
+        console.log(temp);
         this.setState({ CardCombinedPoints: temp });
         this.setState({ CardValue: 'Value: ' })
     }
@@ -615,7 +616,6 @@ class Input extends Component {
                                 place your bet
                             </button>
                         </div> : '' }
-
                         {this.state.selected ?
                         <div  id="selecteds1">
                             <button onClick={() => this.hit()}>
