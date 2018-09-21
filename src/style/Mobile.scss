@@ -1,4 +1,22 @@
+@import 'MobileTable';
+@import 'MobileTitle';
+@import 'MobileButtonCards';
+@import 'MobileDealer';
+@import 'MobilePlayer';
+@import 'MobileOptionHelp';
+@import 'MobileInputChange';
+
 @media only screen and (max-width: 649px) {
+    .gr__localhost {
+        margin: 0;
+        padding: 0;
+        right: 0;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Almendra;
+    }
     .app {
         display: flex;
         flex-direction: column;
@@ -8,10 +26,15 @@
         background-image: linear-gradient(to top, #1e3f07 0%, #205e14 100%);
         z-index: -8;
         height: 1000px;
-        width: 100vw;
+        width: 100%;
         #html {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
             z-index: 1;
             color: white;
+            width: 320px;
         }
     }
 }

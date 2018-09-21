@@ -1,0 +1,21 @@
+@media only screen and (max-width: 649px) {
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        #headTitle {
+            font-size: 60px;
+        }
+        .line {
+            width: 90%;
+            height: 1px;
+            background-color: #ffcc5d;
+        }
+        #subTitle {
+            font-size: 35px;
+            color: #ffcc5d;
+        }
+    }
+}

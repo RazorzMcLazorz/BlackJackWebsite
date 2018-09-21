@@ -1,0 +1,30 @@
+@media only screen and (max-width: 649px) {
+    #playerCards {
+        #blackJackTable {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #YC {
+                position: absolute;
+                top: 480px;
+            }
+            #cards {
+                position: absolute;
+                top: 510px;
+                height: 80px;
+                div {
+                    
+                    a {
+                        position: absolute;
+                        left: 140px;
+                    }
+                }
+            }
+        }
+    }
+    #CCP {
+        position: absolute;
+        top: 580px;
+    }
+}

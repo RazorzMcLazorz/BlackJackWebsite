@@ -1,0 +1,41 @@
+@media only screen and (max-width: 649px) {
+    #bottomRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 320px;
+        margin-top: 340px;
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 320px;
+            flex-wrap: wrap;
+            button {
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 5px;
+                border-color: #ffcc5d;
+                background-color: transparent;
+                color: white;
+                padding-left: 3px;
+                padding-right: 3px;
+                margin: 5px;
+            }
+        }
+        .cont {
+
+        }
+        #money {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            a {
+                margin: 10px;
+            }
+        }
+    }
+}

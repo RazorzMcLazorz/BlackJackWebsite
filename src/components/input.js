@@ -166,13 +166,13 @@ class Input extends Component {
         super(props) 
             this.state = {
                 gameNotStarted: true,
-                text: 'Welcome to Black Jack - the game will walk you through the basics of the game',
-                text2: 'the game is fair and not against you, unless the RNG doesnt like you =.',
+                text: 'Welcome to Black Jack - The game will walk you through the basics.',
+                text2: 'the game is fair and not against you, RNG rules the board =D.',
                 text3: '',
                 dealerCardOne: 'Dealer Cards are displayed here',
                 dealerCardTwo: '',
                 dealerpoint: '',
-                playerText: 'Your Cards',
+                playerText: 'Your Cards:',
                 playerCardOne: 'your Cards are displayed here',
                 playerCardTwo: '',
                 playerCardThree: '',
@@ -389,9 +389,7 @@ class Input extends Component {
             C3 = true;
         }
     }
-
     continueone() {
-        // re
         this.setState({ continue1: false });
         this.setState({ continue2: true });
         this.setState({ continue3: false });
@@ -481,11 +479,11 @@ class Input extends Component {
         this.setState({ playerCardOne: '' });
         this.setState({ playerCardTwo: '' });
         this.setState({ playerCardThree: '' });
-        this.setState({ CardOneVal: '????' });
-        this.setState({ CardTwoVal: '????' });
+        this.setState({ CardOneVal: '' });
+        this.setState({ CardTwoVal: '' });
         this.setState({ CardThreeVal: '' });
-        this.setState({ dealerCardOne: '????' });
-        this.setState({ dealerCardTwo: '????' });
+        this.setState({ dealerCardOne: '' });
+        this.setState({ dealerCardTwo: '' });
         this.setState({ CardValue: '' });
         this.setState({ dealerpoint: '' });
         this.setState({ CardCombinedPoints: '' });
@@ -527,7 +525,7 @@ class Input extends Component {
                 </div>
                 <div id="dealerCards">
                     <a id="dealer">
-                        Dealer Cards
+                        Dealer Cards:
                     </a>
                     <div>
                         <div>
