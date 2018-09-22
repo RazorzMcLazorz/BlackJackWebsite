@@ -169,7 +169,7 @@ class Input extends Component {
                 text: 'Welcome to Black Jack - The game will walk you through the basics.',
                 text2: 'The game is fair and not against you, RNG rules the board =D.',
                 text3: '',
-                dealerCardOne: 'Dealer cards are displayed here',
+                dealerCardOne: 'Dealer cards are displayed here.',
                 dealerCardTwo: '',
                 dealerpoint: '',
                 playerText: 'Your cards:',
@@ -223,8 +223,8 @@ class Input extends Component {
         DealerPoints = Card_Deck_Value[DealerCard1] + Card_Deck_Value[DealerCard2];
         this.setState({ money: cash });
         this.setState({ bet: 0 });
-        this.setState({ text: 'The Dealer has a ' + Card_Deck[DealerCard1] + ' shown, so try and makesure your total cards are higher than the dealers shown card and mystery card but also under 21'});
-        this.setState({ text2: ''});
+        this.setState({ text: 'The Dealer has a ' + Card_Deck[DealerCard1] + ' shown.'});
+        this.setState({ text2: ' Try and make sure your total cards are higher than the dealers shown card and mystery card, but also under 21.'});
         this.setState({ CardOneVal: Card_Deck_Value[CardOne] });
         this.setState({ CardTwoVal: Card_Deck_Value[CardTwo] });
     }
@@ -447,12 +447,12 @@ class Input extends Component {
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints > 20) {
-                this.setState({ text: 'You Loose, and will loose what you bet in.' });
+                this.setState({ text: 'Sorry you lost, you lost your bet.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints < this.state.dealerpoint) {
-                this.setState({ text: 'You Loose, and will loose what you bet in.' });
+                this.setState({ text: 'Sorry you lost, you lost your bet.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
@@ -461,7 +461,7 @@ class Input extends Component {
             this.setState({ text: 'The Dealer has lost due to bad draw of Cards.' });
             if (this.state.CardCombinedPoints > 20) {
                 this.setState({ text2: 'You also lost.' });
-                this.setState({ text3: 'So this is a tie and wont loose anything.' });
+                this.setState({ text3: 'So this is a tie and you wont loose anything.' });
             }
             else {
                 this.setState({ text2: 'You automatically win.' });
