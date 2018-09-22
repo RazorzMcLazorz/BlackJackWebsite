@@ -167,13 +167,13 @@ class Input extends Component {
             this.state = {
                 gameNotStarted: true,
                 text: 'Welcome to Black Jack - The game will walk you through the basics.',
-                text2: 'the game is fair and not against you, RNG rules the board =D.',
+                text2: 'The game is fair and not against you, RNG rules the board =D.',
                 text3: '',
-                dealerCardOne: 'Dealer Cards are displayed here',
+                dealerCardOne: 'Dealer cards are displayed here',
                 dealerCardTwo: '',
                 dealerpoint: '',
-                playerText: 'Your Cards:',
-                playerCardOne: 'your Cards are displayed here',
+                playerText: 'Your cards:',
+                playerCardOne: 'Your cards are displayed here.',
                 playerCardTwo: '',
                 playerCardThree: '',
                 money: '0',
@@ -223,8 +223,8 @@ class Input extends Component {
         DealerPoints = Card_Deck_Value[DealerCard1] + Card_Deck_Value[DealerCard2];
         this.setState({ money: cash });
         this.setState({ bet: 0 });
-        this.setState({ text: 'The Dealer has a ' + Card_Deck[DealerCard1] + ' shown, so try and makesure your total cards'});
-        this.setState({ text2: 'are higher than the dealers shown card and mystery card but also under 21'});
+        this.setState({ text: 'The Dealer has a ' + Card_Deck[DealerCard1] + ' shown, so try and makesure your total cards are higher than the dealers shown card and mystery card but also under 21'});
+        this.setState({ text2: ''});
         this.setState({ CardOneVal: Card_Deck_Value[CardOne] });
         this.setState({ CardTwoVal: Card_Deck_Value[CardTwo] });
     }
@@ -281,7 +281,7 @@ class Input extends Component {
     bet() {
         this.setState({ bets: false });
         this.setState({ selected: true });
-        this.setState({ text: 'Select one of the following options at the bottom' });
+        this.setState({ text: 'Select one of the following options at the bottom.' });
         this.setState({ text2: '' });
     }
 
@@ -304,13 +304,13 @@ class Input extends Component {
             this.setState({ Ace3: true });
         }
         this.setState({ CardThreeVal: Card_Deck_Value[CardThree] });
-        this.setState({ text3: 'click the button that coresponds with your ace to be switched between 1 or 11 value.' });
+        this.setState({ text3: 'Click the button that coresponds with your ace to be switched between 1 or 11 value.' });
     }
 
     stand() {
         this.setState({ selected: false });
         this.setState({ continue1: true });
-        this.setState({ text3: 'click the button that coresponds with your ace to be switched between 1 or 11 value.' });
+        this.setState({ text3: 'Click the button that coresponds with your ace to be switched between 1 or 11 value.' });
         if ( 11 === Card_Deck_Value[CardOne]) {
             this.setState({ Ace1: true });
             console.log(CardOne);
@@ -331,14 +331,14 @@ class Input extends Component {
             this.setState({ playerCardThree: Card_Deck[CardThree] });
             this.setState({ bet: this.state.bet * 2})
             this.setState({ CardThreeVal: Card_Deck_Value[CardThree] });
-            this.setState({ text3: 'click the button that coresponds with your ace to be switched between 1 or 11 value.' });
+            this.setState({ text3: 'Click the button that coresponds with your ace to be switched between 1 or 11 value.' });
         }
         else {
             this.setState({ text: 'Not enough money to double bet!' });
             this.setState({ text2: '' });
         }
         if (this.state.bet = this.state.money) {
-            this.setState({ text2: 'you have a chance to loose the game!' })
+            this.setState({ text2: 'You have a chance to loose the game!' })
         }
     }
 
@@ -354,7 +354,7 @@ class Input extends Component {
         this.setState({ dealerCardTwo: '????' });
         this.setState({ playerCardOne: '????'});
         this.setState({ playerCardTwo: '????'});
-        this.setState({ text: 'you lost half your bet' });
+        this.setState({ text: 'You lost half your bet!!' });
         this.setState({ text2: '' });
         this.setState({ bet: 0 });
     }
@@ -442,17 +442,17 @@ class Input extends Component {
         this.setState({ text3: '' });
         if (this.state.dealerpoint < 20) {
             if (this.state.CardCombinedPoints < 21 && this.state.CardCombinedPoints > this.state.dealerpoint) {
-                this.setState({ text: 'you have won and will gain your bet' });
+                this.setState({ text: 'You beat the Dealer!!!' });
                 cash = cash + this.state.bet;
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints > 20) {
-                this.setState({ text: 'You Loose, and will loose what you bet in' });
+                this.setState({ text: 'You Loose, and will loose what you bet in.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints < this.state.dealerpoint) {
-                this.setState({ text: 'You Loose, and will loose what you bet in' });
+                this.setState({ text: 'You Loose, and will loose what you bet in.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
@@ -460,11 +460,11 @@ class Input extends Component {
         else {
             this.setState({ text: 'The Dealer has lost due to bad draw of Cards.' });
             if (this.state.CardCombinedPoints > 20) {
-                this.setState({ text2: 'You also lost' });
-                this.setState({ text3: 'So this is a tie and wont loose anything' });
+                this.setState({ text2: 'You also lost.' });
+                this.setState({ text3: 'So this is a tie and wont loose anything.' });
             }
             else {
-                this.setState({ text2: 'You automatically win' });
+                this.setState({ text2: 'You automatically win.' });
                 cash = cash + this.state.bet;
                 this.setState({ money: cash });
             }
@@ -525,7 +525,7 @@ class Input extends Component {
                 </div>
                 <div id="dealerCards">
                     <a id="dealer">
-                        Dealer Cards:
+                        Dealer cards:
                     </a>
                     <div>
                         <div>
@@ -552,12 +552,14 @@ class Input extends Component {
                         </a>
                         <div id="cards">
                             <div>
+                                {/* <img src={`./assets/${this.state.playerCardOne}.svg`}/> */}
                                 {this.state.playerCardOne}
                                 <a>
                                     {this.state.CardOneVal}
                                 </a>
                             </div>
                             <div>
+                                {/* <img src={`./assets/${this.state.playerCardTwo}.svg`}/> */}
                                 {this.state.playerCardTwo}
                                 <a>
                                     {this.state.CardTwoVal}
@@ -649,21 +651,21 @@ class Input extends Component {
                         {this.state.continue1 ?
                         <div className="cont">
                             <button id="continue1" onClick={() => this.continueone()}>
-                                Continue
+                                Continue.
                             </button>
                         </div> : ''}
 
                         {this.state.continue2 ?
                         <div className="cont">
                             <button id="continue2" onClick={this.continuetwo}>
-                                Continue
+                                Continue..
                             </button>
                         </div> : ''}
 
                         {this.state.continue3 ?
                         <div className="cont">
                             <button id="continue3" onClick={this.continuethree}>
-                                Continue
+                                Continue...
                             </button>
                         </div> : ''}
                         
@@ -680,16 +682,16 @@ class Input extends Component {
                 {this.state.selected ?
                 <div id="optionHelp">
                     <a>
-                        Hit - you can ask the Dealer for another card
+                        Hit - You can ask the Dealer for another card.
                     </a>
                     <a>
-                        Stand - you do nothing because your satisfied with your cards
+                        Stand - Satisfied with your cards.
                     </a>
                     <a>
-                        Double Down - Allows you to double your initial bet in return for receiving one card
+                        Double Down - Allows you to double your initial bet in return for receiving one card.
                     </a>
                     <a>
-                        Surrender - Forfeit the hand immediately with an automatic loss of half the original bet
+                        Surrender - Forfeit the hand immediately with an automatic loss of half the original bet.
                     </a>
                 </div> : ''}
             </div>
