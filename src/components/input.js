@@ -447,12 +447,12 @@ class Input extends Component {
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints > 20) {
-                this.setState({ text: 'Sorry you lost, you lost your bet.' });
+                this.setState({ text: 'Sorry, you lost your bet.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
             else if (this.state.CardCombinedPoints < this.state.dealerpoint) {
-                this.setState({ text: 'Sorry you lost, you lost your bet.' });
+                this.setState({ text: 'Sorry, you lost your bet.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
             }
@@ -464,7 +464,7 @@ class Input extends Component {
                 this.setState({ text3: 'So this is a tie and you wont loose anything.' });
             }
             else {
-                this.setState({ text2: 'You automatically win.' });
+                this.setState({ text2: 'You win!!' });
                 cash = cash + this.state.bet;
                 this.setState({ money: cash });
             }
@@ -496,7 +496,7 @@ class Input extends Component {
             this.setState({ gameNotStarted: false });
             this.setState({ gameEnded: false });
             this.setState({ text: 'GAME OVER' });
-            this.setState({ text2: 'Thanks for Playing i hope you enjoyed!'});
+            this.setState({ text2: 'Thanks for playing I hope you enjoyed!'});
         }
         this.setState({ Ace1: false });
         this.setState({ Ace2: false });
