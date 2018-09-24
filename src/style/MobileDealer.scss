@@ -9,6 +9,22 @@
             top: 300px;
             left: 15%;
             width: 70%;
+            div {
+                div {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    img {
+                        height: 25px;
+                        margin-top: 5px;
+                    }
+                    color: #ffcc5d;
+                    a {
+                        margin-top: 5px;
+                        color: white;                    }
+                }
+            }
             #dealer {
                 div {
                     div {

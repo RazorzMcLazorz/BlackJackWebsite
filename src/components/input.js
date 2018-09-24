@@ -133,6 +133,115 @@ let Card_Deck_Value = {
 	52 : 10
 };
 
+const Card_Deck_Picture_value = {
+	1 : 'Ace',
+	2 : '2',
+	3 : '3',
+	4 : '4',
+	5 : '5',
+	6 : '6',
+	7 : '7',
+	8 : '8',
+	9 : '9',
+	10 : '10',
+	11 : 'Jack',
+	12 : 'Queen',
+	13 : 'King',
+	14 : 'Ace',
+	15 : '2',
+	16 : '3',
+	17 : '4',
+	18 : '5',
+	19 : '6',
+	20 : '7',
+	21 : '8',
+	22 : '9',
+	23 : '10',
+	24 : 'Jack',
+	25 : 'Queen',
+	26 : 'King',
+	27 : 'Ace',
+	28 : '2',
+	29 : '3',
+	30 : '4',
+	31 : '5',
+	32 : '6',
+	33 : '7',
+	34 : '8',
+	35 : '9',
+	36 : '10',
+	37 : 'Jack',
+	38 : 'Queen',
+	39 : 'King',
+	40 : 'Ace',
+	41 : '2',
+	42 : '3',
+	43 : '4',
+	44 : '5',
+	45 : '6',
+	46 : '7',
+	47 : '8',
+	48 : '9',
+	49 : '10',
+	50 : 'Jack',
+	51 : 'Queen',
+	52 : 'King',
+};
+
+const Card_Deck_Picture = {
+	1 : './assets/Club.svg',
+	2 : './assets/Club.svg',
+	3 : './assets/Club.svg',
+	4 : './assets/Club.svg',
+	5 : './assets/Club.svg',
+	6 : './assets/Club.svg',
+	7 : './assets/Club.svg',
+	8 : './assets/Club.svg',
+	9 : './assets/Club.svg',
+	10 : './assets/Club.svg',
+	11 : './assets/Club.svg',
+	12 : './assets/Club.svg',
+	13 : './assets/Club.svg',
+	14 : './assets/Diamond.svg',
+	15 : './assets/Diamond.svg',
+	16 : './assets/Diamond.svg',
+	17 : './assets/Diamond.svg',
+	18 : './assets/Diamond.svg',
+	19 : './assets/Diamond.svg',
+	20 : './assets/Diamond.svg',
+	21 : './assets/Diamond.svg',
+	22 : './assets/Diamond.svg',
+	23 : './assets/Diamond.svg',
+	24 : './assets/Diamond.svg',
+	25 : './assets/Diamond.svg',
+	26 : './assets/Diamond.svg',
+	27 : './assets/Heart.svg',
+	28 : './assets/Heart.svg',
+	29 : './assets/Heart.svg',
+	30 : './assets/Heart.svg',
+	31 : './assets/Heart.svg',
+	32 : './assets/Heart.svg',
+	33 : './assets/Heart.svg',
+	34 : './assets/Heart.svg',
+	35 : './assets/Heart.svg',
+	36 : './assets/Heart.svg',
+	37 : './assets/Heart.svg',
+	38 : './assets/Heart.svg',
+	39 : './assets/Heart.svg',
+	40 : './assets/Spade.svg',
+	41 : './assets/Spade.svg',
+	42 : './assets/Spade.svg',
+	43 : './assets/Spade.svg',
+	44 : './assets/Spade.svg',
+	45 : './assets/Spade.svg',
+	46 : './assets/Spade.svg',
+	47 : './assets/Spade.svg',
+	48 : './assets/Spade.svg',
+	49 : './assets/Spade.svg',
+	50 : './assets/Spade.svg',
+	51 : './assets/Spade.svg',
+	52 : './assets/Spade.svg',
+};
 
 let used = [0];
 
@@ -191,7 +300,18 @@ class Input extends Component {
                 CardThreeVal: '',
                 CardCombinedPoints: null,
                 CardValue: '',
-                gameEnded: true
+                gameEnded: true,
+                Player_Picture1: '',
+                Player_Picture_Value1: '',
+                Player_Picture2: '',
+                Player_Picture_Value2: '',
+                Player_Picture3: '',
+                Player_Picture_Value3: '',
+                StandFix: false,
+                Dealer_Picture1: '',
+                Dealer_Picture_Val1: '',
+                Dealer_Picture2: '',
+                Dealer_Picture_Val2: ''
         }
         this.startGame = this.startGame.bind(this);
         this.continueone = this.continueone.bind(this);
@@ -218,6 +338,9 @@ class Input extends Component {
         this.setState({ })
         this.setState({ dealerCardOne: Card_Deck[DealerCard1]});
         this.setState({ dealerCardTwo: '????'});
+        this.setState({ Dealer_Picture1: Card_Deck_Picture[DealerCard1] });
+        this.setState({ Dealer_Picture_Val1: Card_Deck_Picture_value[DealerCard1] });
+        this.setState({ Dealer_Picture_Val2: '????' });
         this.setState({ playerCardOne: Card_Deck[CardOne]});
         this.setState({ playerCardTwo: Card_Deck[CardTwo]});
         DealerPoints = Card_Deck_Value[DealerCard1] + Card_Deck_Value[DealerCard2];
@@ -227,6 +350,10 @@ class Input extends Component {
         this.setState({ text2: ' Try and make sure your total cards are higher than the dealers shown card and mystery card, but also under 21.'});
         this.setState({ CardOneVal: Card_Deck_Value[CardOne] });
         this.setState({ CardTwoVal: Card_Deck_Value[CardTwo] });
+        this.setState({ Player_Picture1: Card_Deck_Picture[CardOne] });
+        this.setState({ Player_Picture_Value1: Card_Deck_Picture_value[CardOne] });
+        this.setState({ Player_Picture2: Card_Deck_Picture[CardTwo] });
+        this.setState({ Player_Picture_Value2: Card_Deck_Picture_value[CardTwo] });
     }
 
     plusten() {
@@ -291,6 +418,8 @@ class Input extends Component {
         makeShift();
         CardThree = num;
         this.setState({ playerCardThree: Card_Deck[CardThree] });
+        this.setState({ Player_Picture3: Card_Deck_Picture[CardThree] });
+        this.setState({ Player_Picture_Value3: Card_Deck_Picture_value[CardThree] });
         this.setState({ text: '' });
         if ( 11 === Card_Deck_Value[CardOne]) {
             this.setState({ Ace1: true });
@@ -329,6 +458,8 @@ class Input extends Component {
             makeShift();
             CardThree = num;
             this.setState({ playerCardThree: Card_Deck[CardThree] });
+            this.setState({ Player_Picture3: Card_Deck_Picture[CardThree] });
+            this.setState({ Player_Picture_Value3: Card_Deck_Picture_value[CardThree] });
             this.setState({ bet: this.state.bet * 2})
             this.setState({ CardThreeVal: Card_Deck_Value[CardThree] });
             this.setState({ text3: 'Click the button that coresponds with your ace to be switched between 1 or 11 value.' });
@@ -394,6 +525,8 @@ class Input extends Component {
         this.setState({ continue2: true });
         this.setState({ continue3: false });
         this.setState({ dealerCardTwo: Card_Deck[DealerCard2] });
+        this.setState({ Dealer_Picture2: Card_Deck_Picture[DealerCard2] });
+        this.setState({ Dealer_Picture_Val2: Card_Deck_Picture_value[DealerCard2] });
         this.setState({ text: '' });
         this.setState({ text2: '' });
         this.setState({ text3: '' });
@@ -501,6 +634,21 @@ class Input extends Component {
         this.setState({ Ace1: false });
         this.setState({ Ace2: false });
         this.setState({ Ace3: false });
+        this.setState({ Player_Picture1: '' });
+        this.setState({ Player_Picture_Value1: '' });
+        this.setState({ Player_Picture2: '' });
+        this.setState({ Player_Picture_Value2: '' });
+        this.setState({ Player_Picture3: '' });
+        this.setState({ Player_Picture_Value3: '' });
+        this.setState({ StandFix: false });
+        this.setState({ CardThree: '' });
+        this.setState({ CardThreeVal: '' });
+        Card_Deck_Value[CardThree] = 0;
+        CV3 = 0;
+        this.setState({ Dealer_Picture1: '' });
+        this.setState({ Dealer_Picture_Val1: '' });
+        this.setState({ Dealer_Picture2: '' });
+        this.setState({ Dealer_Picture_Val2: '' });
     }
 
     // selection1() {
@@ -529,16 +677,20 @@ class Input extends Component {
                     </a>
                     <div>
                         <div>
-                            {this.state.dealerCardOne}
+                            <img src={this.state.Dealer_Picture1}/>
+                            {this.state.Dealer_Picture_Val1}
                         </div>
                         <div>
-                            {this.state.dealerCardTwo}
+                            <img src={this.state.Dealer_Picture2}/>
+                            {this.state.Dealer_Picture_Val2}
                         </div>
                         <div>
                             <a>
                                 {this.state.CardValue}
                             </a>
-                            {this.state.dealerpoint}
+                            <a>
+                                {this.state.dealerpoint}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -552,21 +704,22 @@ class Input extends Component {
                         </a>
                         <div id="cards">
                             <div>
-                                {/* <img src={`./assets/${this.state.playerCardOne}.svg`}/> */}
-                                {this.state.playerCardOne}
+                                <img src={this.state.Player_Picture1}/>
+                                    {this.state.Player_Picture_Value1}
                                 <a>
                                     {this.state.CardOneVal}
                                 </a>
                             </div>
                             <div>
-                                {/* <img src={`./assets/${this.state.playerCardTwo}.svg`}/> */}
-                                {this.state.playerCardTwo}
+                                <img src={this.state.Player_Picture2}/>
+                                    {this.state.Player_Picture_Value2}
                                 <a>
                                     {this.state.CardTwoVal}
                                 </a>
                             </div>
                             <div>
-                                {this.state.playerCardThree}
+                                <img src={this.state.Player_Picture3}/>
+                                    {this.state.Player_Picture_Value3}
                                 <a>
                                     {this.state.CardThreeVal}
                                 </a>
@@ -691,7 +844,7 @@ class Input extends Component {
                         Double Down - Allows you to double your initial bet in return for receiving one card.
                     </a>
                     <a>
-                        Surrender - Forfeit the hand immediately with an automatic loss of half the original bet.
+                        Surrender - Forfeit your hand and loss of half the original bet.
                     </a>
                 </div> : ''}
             </div>

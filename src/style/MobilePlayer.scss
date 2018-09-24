@@ -7,17 +7,24 @@
             align-items: center;
             #YC {
                 position: absolute;
-                top: 480px;
+                top: 475px;
             }
             #cards {
                 position: absolute;
-                top: 510px;
+                top: 500px;
                 height: 80px;
                 div {
-                    
+                    img {
+                        height: 25px;
+                        color: #ffcc5d;
+                        svg {
+                            color:#ffcc5d;
+                        }
+                    }
+                    color: #ffcc5d;
                     a {
                         position: absolute;
-                        left: 140px;
+                        left: 100px;
                     }
                 }
             }

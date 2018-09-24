@@ -13,13 +13,25 @@
             #cards {
                 position: absolute;
                 top: 530px;
-                margin-left: 10px;
                 height: 130px;
+                margin-left: 10px;
+                div {
+                    img {
+                        height: 25px;
+                        color: #ffcc5d;
+                        svg {
+                            color:#ffcc5d;
+                        }
+                    }
+                    color: #ffcc5d;
+                }
+                
                 div {
                     
                     a {
                         position: absolute;
                         left: 120px;
+                        color: white;
                     }
                 }
             }

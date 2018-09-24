@@ -6,6 +6,20 @@
             justify-content: center;
             align-items: center;
             margin-top: 20px;
+            div {
+                div {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    img {
+                        height: 25px;
+                    }
+                    color: #ffcc5d;
+                    a {
+                        color: white;                    }
+                }
+            }
             #dealer {
                 
                 div {
