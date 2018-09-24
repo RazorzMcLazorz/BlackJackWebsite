@@ -706,7 +706,7 @@ class Input extends Component {
                             <div>
                                 <img src={this.state.Player_Picture1}/>
                                     {this.state.Player_Picture_Value1}
-                                <a>
+                                <a className="ap">
                                     {this.state.CardOneVal}
                                 </a>
                             </div>
