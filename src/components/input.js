@@ -579,7 +579,13 @@ class Input extends Component {
                 cash = cash + this.state.bet;
                 this.setState({ money: cash });
             }
-            else if (this.state.CardCombinedPoints > 20) {
+            else if (this.state.CardCombinedPoints === 21) {
+                this.setState({ text: 'BLACK JACK!!!' });
+                this.setState({ text2: 'Bonus $10'});
+                cash = cash + this.state.bet + 10;
+                this.setState({ money: cash });
+            }
+            else if (this.state.CardCombinedPoints > 21) {
                 this.setState({ text: 'Sorry, you lost your bet.' });
                 cash = cash - this.state.bet;
                 this.setState({ money: cash });
@@ -592,9 +598,15 @@ class Input extends Component {
         }
         else {
             this.setState({ text: 'The Dealer has lost due to bad draw of Cards.' });
-            if (this.state.CardCombinedPoints > 20) {
+            if (this.state.CardCombinedPoints > 21) {
                 this.setState({ text2: 'You also lost.' });
                 this.setState({ text3: 'So this is a tie and you wont loose anything.' });
+            }
+            else if (this.state.CardCombinedPoints === 21) {
+                this.setState({ text2: 'BLACK JACK!!!' });
+                this.setState({ text3: 'Bonus $10'});
+                cash = cash + this.state.bet + 10;
+                this.setState({ money: cash });
             }
             else {
                 this.setState({ text2: 'You win!!' });
@@ -643,8 +655,8 @@ class Input extends Component {
         this.setState({ StandFix: false });
         this.setState({ CardThree: '' });
         this.setState({ CardThreeVal: '' });
-        Card_Deck_Value[CardThree] = 0;
         CV3 = 0;
+        CardThree = 0;
         this.setState({ Dealer_Picture1: '' });
         this.setState({ Dealer_Picture_Val1: '' });
         this.setState({ Dealer_Picture2: '' });
